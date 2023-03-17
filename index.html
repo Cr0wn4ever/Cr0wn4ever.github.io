@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-divice-width, initial scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles.css">
+    <title>The Cum Times</title>
+
+    <script>
+      function notReady(){
+        alert('Esta funcion aun no esta lista, lo siento');
+      }
+    </script>
+
+  </head>
+  <body onload="timeDate()">
+    <div class="banner">
+      <div class="widget">
+        <p id="time"></p>
+        <p id="date"></p>
+        <script>
+          function timeDate(){
+            const today = new Date();
+            let hour = today.getHours();
+            let minute = today.getMinutes();
+            minute<10 ? document.getElementById('time').innerHTML=`${hour}:0${minute} | 00&deg | sunny` : document.getElementById('time').innerHTML=`${hour}:${minute} | 00&deg | sunny`;            
+            document.getElementById('date').innerHTML=`${today.toDateString()}`;  
+            setTimeout(timeDate, 1000);
+          }
+        </script>
+      </div>
+      <header>
+        <a href="" rel="noreferrer noopener">
+          <div class="logo">
+            <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 376 100"><defs><style>.cls-1{fill:#fff;}</style></defs><title>01</title><path class="cls-1" d="M33.83,27.62l-1.22,6.2c-.81.35-1.75.71-2.81,1.09a31.22,31.22,0,0,1-3.11,1,10.57,10.57,0,0,1-2.59.39,9,9,0,0,1-2.46-.32l-2.28-.64A9.25,9.25,0,0,0,16.8,35c-.21,0-.59,0-1.15.06a8.74,8.74,0,0,0-1.34.19l-.13-.38L2.08,33.57,3.3,26l9,1.25q4.32.61,7.49,1a42.4,42.4,0,0,0,4.45.39,12.61,12.61,0,0,0,2.3-.26c.9-.17,1.91-.38,3-.64s2.32-.51,3.55-.77ZM19.3,35.23c-.6,0-1.08.41-1.44,1.22A12.46,12.46,0,0,0,17,39.71q-.29,2.05-.39,4.71c-.06,1.77-.09,3.61-.09,5.53a18.08,18.08,0,0,0,.73,5.57,6.64,6.64,0,0,0,2.24,3.36A6.09,6.09,0,0,0,23.27,60h7.87v6c-.81.21-1.76.41-2.85.61l-3.23.54c-1.07.17-2,.3-2.78.38s-1.3.13-1.51.13a17.35,17.35,0,0,1-8.67-2,12.21,12.21,0,0,1-5.22-6A25.82,25.82,0,0,1,5.16,49.57a25.44,25.44,0,0,1,.48-4.67,24.16,24.16,0,0,1,1.24-4.48,16.48,16.48,0,0,1,2.88-2.56,26.14,26.14,0,0,1,3.88-2.34,8.31,8.31,0,0,1,3.61-1ZM20,59.94V31.65h3.46V56.29A4,4,0,0,1,23,57.66c-.32.67-.72,1.42-1.18,2.28Z"/><path class="cls-1" d="M33.63,30.05V26q1.86-.25,3.27-.48t2.88-.42l2.59-.32c.75-.09,1.23-.13,1.44-.13s.45.18.83.55a12.62,12.62,0,0,1,1.12,1.18,1.92,1.92,0,0,1,.55.9l-.52,13.31.45.06,1.67-1.25,1.76-1.31c.57-.42,1.06-.77,1.47-1a2.11,2.11,0,0,1,.8-.39,15.1,15.1,0,0,1,5.44.87,6.53,6.53,0,0,1,3.42,2.94A11.64,11.64,0,0,1,62,46.24l-.07,18.18a9.27,9.27,0,0,1-1,3.77,17.64,17.64,0,0,1-2.75,4.19,19,19,0,0,1-4.29,3.68L51,73.57a25.57,25.57,0,0,0,.9-4.19A25.8,25.8,0,0,0,52,66.05q0-1.58,0-3.36V46.37a3.33,3.33,0,0,0-.41-1.86,1.85,1.85,0,0,0-.93-.73,2.82,2.82,0,0,0-.83-.16,3.08,3.08,0,0,0-.87.28l-1.41.61c-.49.22-.9.41-1.24.58V61.34l2.62,1v4L44.52,67l-3.27.51a16.8,16.8,0,0,1-1.85.22,2.36,2.36,0,0,1-1-.54A11.43,11.43,0,0,1,37,66c-.45-.44-.68-.75-.68-.92V31Z"/><path class="cls-1" d="M76,53.22a13.34,13.34,0,0,0,.55,4.12,5.6,5.6,0,0,0,1.5,2.56,3.07,3.07,0,0,0,2.11.87l1.22-.07,2.85-.12,3.29-.13c1.07,0,1.9-.09,2.5-.13v4.1c-.56.17-1.4.44-2.53.83s-2.31.76-3.55,1.12l-3.39,1a9.6,9.6,0,0,1-2.12.41,13.27,13.27,0,0,1-6.81-1.66,10.83,10.83,0,0,1-4.35-4.77,16.69,16.69,0,0,1-1.51-7.39,32.56,32.56,0,0,1,.51-5.82,22.58,22.58,0,0,1,1.16-4.36,12.26,12.26,0,0,1,2.27-1.92c1.09-.76,2.28-1.54,3.58-2.33s2.51-1.45,3.62-2a6.65,6.65,0,0,1,2.43-.8,14,14,0,0,1,6.43,1.35,8.59,8.59,0,0,1,4,4.8c.92,2.3,1.34,5.59,1.25,9.85l-18.81,2v-4.1l9.34-1.79a17.13,17.13,0,0,0-.51-5.09c-.39-1.26-.94-2-1.67-2.21a3.81,3.81,0,0,0-1-.19,1.74,1.74,0,0,0-.89.07c-.43.3-.79,1.47-1.09,3.52A60.2,60.2,0,0,0,76,53.22Z"/><path class="cls-1" d="M116.19,33.7c-.08,1.32-.18,2.68-.29,4.09s-.18,2.88-.22,4.42-.06,3.2-.06,5a31.18,31.18,0,0,0,.76,7.84,7,7,0,0,0,2.28,3.9,6.06,6.06,0,0,0,3.74,1.12h9.28v6c-.72.17-1.7.36-2.91.58s-2.47.39-3.75.54l-3.35.38c-1,.11-1.55.16-1.77.16a17.37,17.37,0,0,1-8.67-2A12.32,12.32,0,0,1,106,59.58a28.37,28.37,0,0,1-1.75-10.84,36.81,36.81,0,0,1,.54-6.56,26.81,26.81,0,0,1,1.38-5.09,19.23,19.23,0,0,1,3-2.72,48,48,0,0,1,4.26-2.91Zm2.5,26.49V31a5.55,5.55,0,0,1,.32-1.54c.21-.68.47-1.45.77-2.3l2.37.13V56.54a4.18,4.18,0,0,1-.48,1.38c-.33.66-.72,1.42-1.19,2.27ZM131.62,41.7h-5.19l-1-7.75a10.72,10.72,0,0,0-1.5-.51c-.62-.17-1.22-.32-1.79-.45a6.51,6.51,0,0,0-1.32-.19H120a3.39,3.39,0,0,0-.64.06l.45-5.69a1.47,1.47,0,0,1,.54-.16l.54,0a30.16,30.16,0,0,1,3.62.25c1.39.17,2.79.37,4.23.58s2.65.4,3.67.57Z"/><path class="cls-1" d="M147.68,67.74a14.92,14.92,0,0,1-5.38-.86A6.61,6.61,0,0,1,138.88,64a11.47,11.47,0,0,1-1.18-5.7V43.17l-2.63-1v-4c1.75-.3,3.21-.55,4.39-.77s2.25-.39,3.23-.54,1.58-.23,1.79-.23a2.46,2.46,0,0,1,1.09.58A15.45,15.45,0,0,1,147,38.5c.45.42.67.74.67,1V58.14A3.19,3.19,0,0,0,148.1,60a1.87,1.87,0,0,0,.92.74,3.26,3.26,0,0,0,.84.16,3.05,3.05,0,0,0,.83-.29L152.1,60l1.21-.55V43.17l-2.62-1v-4c1.75-.3,3.21-.55,4.38-.77s2.25-.39,3.23-.54a18,18,0,0,1,1.86-.23,2.32,2.32,0,0,1,1.06.58,16.31,16.31,0,0,1,1.4,1.22c.45.42.68.74.68,1V61.41l2.68,1v4l-4.54.67q-1.86.29-3.39.48c-1,.13-1.67.19-1.92.19s-.4-.18-.8-.54A9.6,9.6,0,0,1,154.21,66a2,2,0,0,1-.51-.9V63.65c-.52.38-1.08.81-1.7,1.28s-1.24.92-1.86,1.34-1.15.78-1.6,1.06A2.31,2.31,0,0,1,147.68,67.74Z"/><path class="cls-1" d="M173.66,67.74a2.4,2.4,0,0,1-1-.54A12.31,12.31,0,0,1,171.26,66c-.44-.44-.67-.75-.67-.92V43.17l-2.69-1v-4l4.52-.74,3.39-.51c1-.15,1.69-.23,1.95-.23s.38.2.77.58.75.8,1.12,1.25a2.1,2.1,0,0,1,.54.93v1.47l1.57-1.31c.57-.49,1.14-1,1.7-1.41s1-.81,1.4-1.09a1.94,1.94,0,0,1,.77-.42,14.53,14.53,0,0,1,5.63,1,6.52,6.52,0,0,1,3.46,3.23c.47-.39,1-.82,1.5-1.31s1.07-1,1.6-1.41,1-.81,1.35-1.09a1.77,1.77,0,0,1,.73-.42,17.49,17.49,0,0,1,5.92.87,6.74,6.74,0,0,1,3.65,3,11.34,11.34,0,0,1,1.25,5.76v15l2.62,1v4l-4.41.74-3.27.51a17.65,17.65,0,0,1-1.79.22,2.57,2.57,0,0,1-1-.54A10.44,10.44,0,0,1,201.41,66c-.45-.44-.67-.75-.67-.92V46.43a3.58,3.58,0,0,0-.26-1.5,2.12,2.12,0,0,0-.64-.83,1.8,1.8,0,0,0-.74-.36,3.57,3.57,0,0,0-.6-.06,1.29,1.29,0,0,0-.39.16l-.73.38-.87.48c-.3.18-.57.32-.83.45V61.34l2.37,1v4l-4.29.74-3.17.51a16.85,16.85,0,0,1-1.76.22,2.57,2.57,0,0,1-1-.54A10.44,10.44,0,0,1,186.37,66c-.45-.44-.67-.75-.67-.92V46.43a3.18,3.18,0,0,0-.42-1.85,1.85,1.85,0,0,0-1-.74,3.11,3.11,0,0,0-.86-.16,1.29,1.29,0,0,0-.39.16l-.77.38c-.3.15-.59.31-.89.48s-.58.32-.83.45V61.34l2.36,1v4l-4.28.74-3.17.51A15.88,15.88,0,0,1,173.66,67.74Z"/><path class="cls-1" d="M257.18,27.62,256,33.82c-.81.35-1.75.71-2.82,1.09a31.06,31.06,0,0,1-3.1,1,10.64,10.64,0,0,1-2.6.39,9.1,9.1,0,0,1-2.46-.32l-2.27-.64a9.3,9.3,0,0,0-2.56-.32c-.22,0-.6,0-1.15.06a8.71,8.71,0,0,0-1.35.19l-.13-.38-12.09-1.28L226.65,26c3.12.43,6.12.84,9,1.25s5.37.74,7.48,1a42.83,42.83,0,0,0,4.45.39,12.8,12.8,0,0,0,2.31-.26c.89-.17,1.9-.38,3-.64s2.31-.51,3.55-.77Zm-14.53,7.61c-.59,0-1.07.41-1.44,1.22a12.46,12.46,0,0,0-.83,3.26,45.87,45.87,0,0,0-.38,4.71c-.07,1.77-.1,3.61-.1,5.53a18.06,18.06,0,0,0,.74,5.57,6.64,6.64,0,0,0,2.24,3.36A6.06,6.06,0,0,0,246.62,60h7.87v6c-.81.21-1.76.41-2.84.61l-3.24.54c-1.06.17-2,.3-2.78.38s-1.29.13-1.5.13a17.39,17.39,0,0,1-8.68-2,12.19,12.19,0,0,1-5.21-6,25.81,25.81,0,0,1-1.73-10.11A25.44,25.44,0,0,1,229,44.9a24.12,24.12,0,0,1,1.25-4.48,15.78,15.78,0,0,1,2.88-2.56A26.56,26.56,0,0,1,237,35.52a8.35,8.35,0,0,1,3.62-1Zm.71,24.71V31.65h3.45V56.29a4,4,0,0,1-.48,1.37c-.32.67-.71,1.42-1.18,2.28Z"/><path class="cls-1" d="M263.58,67.74a2.68,2.68,0,0,1-1.05-.57A13.93,13.93,0,0,1,261.05,66c-.44-.42-.67-.72-.67-.89V43l-2.69-.9v-4c1.84-.3,3.39-.53,4.68-.7l3.48-.48c1-.15,1.7-.23,2-.23s.45.2.86.58a12.53,12.53,0,0,1,1.15,1.25,2.16,2.16,0,0,1,.55.93V61.41l2.62.89v4c-1.71.3-3.15.55-4.32.74l-3.23.51A16.61,16.61,0,0,1,263.58,67.74Zm-3.84-41.66c0-.13.28-.45.83-1s1.22-1.09,2-1.73,1.45-1.19,2.05-1.66a3.06,3.06,0,0,1,1.15-.71,2.83,2.83,0,0,1,1.31.8A21.7,21.7,0,0,1,269,23.74c.66.75,1.23,1.44,1.7,2.08s.68,1.07.64,1.28l-.45,1.8A3.05,3.05,0,0,1,270,30c-.55.52-1.2,1.06-2,1.64s-1.43,1.07-2,1.5a3.3,3.3,0,0,1-1.18.64c-.26,0-.69-.27-1.28-.8a24,24,0,0,1-1.89-1.89A16.53,16.53,0,0,1,260,29c-.43-.64-.62-1.06-.58-1.28Z"/><path class="cls-1" d="M280.67,67.74a2.4,2.4,0,0,1-1-.54A12.31,12.31,0,0,1,278.27,66c-.45-.44-.67-.75-.67-.92V43.17l-2.69-1v-4l4.51-.74,3.39-.51c1.05-.15,1.7-.23,2-.23s.38.2.76.58a13.61,13.61,0,0,1,1.12,1.25,2.05,2.05,0,0,1,.55.93v1.47l1.57-1.31c.57-.49,1.14-1,1.69-1.41s1-.81,1.41-1.09a1.88,1.88,0,0,1,.77-.42,14.56,14.56,0,0,1,5.63,1,6.52,6.52,0,0,1,3.46,3.23c.46-.39,1-.82,1.5-1.31s1.06-1,1.6-1.41,1-.81,1.34-1.09a1.78,1.78,0,0,1,.74-.42,17.53,17.53,0,0,1,5.92.87,6.74,6.74,0,0,1,3.65,3,11.34,11.34,0,0,1,1.25,5.76v15l2.62,1v4c-1.75.3-3.22.55-4.42.74l-3.26.51a17.65,17.65,0,0,1-1.79.22,2.65,2.65,0,0,1-1-.54A11.07,11.07,0,0,1,308.41,66c-.45-.44-.67-.75-.67-.92V46.43a3.59,3.59,0,0,0-.25-1.5,2.32,2.32,0,0,0-.64-.83,1.86,1.86,0,0,0-.74-.36,3.78,3.78,0,0,0-.61-.06,1.4,1.4,0,0,0-.38.16l-.74.38-.86.48c-.3.18-.58.32-.83.45V61.34l2.36,1v4l-4.28.74-3.17.51a16.85,16.85,0,0,1-1.76.22,2.65,2.65,0,0,1-1-.54A11.07,11.07,0,0,1,293.37,66c-.45-.44-.67-.75-.67-.92V46.43a3.27,3.27,0,0,0-.41-1.85,1.85,1.85,0,0,0-1-.74,3.23,3.23,0,0,0-.87-.16,1.4,1.4,0,0,0-.38.16l-.77.38q-.45.22-.9.48c-.3.18-.57.32-.83.45V61.34l2.37,1v4l-4.29.74-3.17.51A16.06,16.06,0,0,1,280.67,67.74Z"/><path class="cls-1" d="M333,53.22a13.34,13.34,0,0,0,.55,4.12,5.6,5.6,0,0,0,1.5,2.56,3.07,3.07,0,0,0,2.11.87l1.22-.07,2.85-.12,3.29-.13c1.07,0,1.9-.09,2.5-.13v4.1c-.56.17-1.4.44-2.53.83s-2.32.76-3.55,1.12l-3.39,1a9.6,9.6,0,0,1-2.12.41,13.27,13.27,0,0,1-6.81-1.66,10.83,10.83,0,0,1-4.35-4.77,16.69,16.69,0,0,1-1.51-7.39,32.56,32.56,0,0,1,.51-5.82,21.88,21.88,0,0,1,1.16-4.36,12.26,12.26,0,0,1,2.27-1.92c1.08-.76,2.28-1.54,3.58-2.33s2.51-1.45,3.62-2a6.65,6.65,0,0,1,2.43-.8,14,14,0,0,1,6.43,1.35,8.59,8.59,0,0,1,4,4.8c.92,2.3,1.34,5.59,1.25,9.85l-18.81,2v-4.1l9.34-1.79a17.13,17.13,0,0,0-.51-5.09c-.39-1.26-.94-2-1.67-2.21a3.81,3.81,0,0,0-1-.19,1.74,1.74,0,0,0-.89.07c-.43.3-.79,1.47-1.09,3.52A60.2,60.2,0,0,0,333,53.22Z"/><path class="cls-1" d="M364.7,67.74c-.51,0-1.35,0-2.53-.06s-2.48-.11-3.93-.19-2.87-.18-4.26-.29-2.53-.2-3.42-.29l.19-10.75h4.73l1.35,5.12c.68.21,1.47.45,2.37.7s1.73.46,2.52.61a10.68,10.68,0,0,0,1.83.23.66.66,0,0,0,.54-.32,2.42,2.42,0,0,0,.35-.84,3.74,3.74,0,0,0,.13-1,2.21,2.21,0,0,0-.83-1.69,14.34,14.34,0,0,0-2.27-1.57c-1-.55-2.1-1.19-3.43-1.92a27.28,27.28,0,0,1-4.6-3.17,7.48,7.48,0,0,1-2.15-2.94,9.68,9.68,0,0,1-.54-3.3c0-.55,0-1.13.09-1.73a8.4,8.4,0,0,1,.36-1.66A17.91,17.91,0,0,1,353,40.93a30.18,30.18,0,0,1,2.4-2,23.21,23.21,0,0,1,2.4-1.6,4,4,0,0,1,1.76-.64c.59,0,1.45,0,2.56,0s2.3.06,3.58.12l3.65.2c1.15.06,2.07.14,2.75.22l-.19,9.22h-5.25l-.45-3.59a6.58,6.58,0,0,0-1.15-.32c-.6-.13-1.26-.25-2-.38l-2-.35a8.06,8.06,0,0,0-1.21-.16.51.51,0,0,0-.48.25,1.57,1.57,0,0,0-.23.58,3.07,3.07,0,0,0-.06.57A2.63,2.63,0,0,0,360,45a10,10,0,0,0,2.17,1.6c.83.47,1.53.88,2.08,1.22,1,.56,2,1.15,3.07,1.79a36.09,36.09,0,0,1,3.08,2.08,10.89,10.89,0,0,1,2.36,2.4,4.71,4.71,0,0,1,.9,2.75c0,.56,0,1.22-.1,2a5.58,5.58,0,0,1-.41,1.85,17.78,17.78,0,0,1-1.54,2,22,22,0,0,1-2.3,2.34,21.34,21.34,0,0,1-2.5,1.89A4.12,4.12,0,0,1,364.7,67.74Z"/></svg>
+          </div>
+        </a>
+        <div class="navbar">
+            <a href="#">Inicio</a>
+            <a href="#">Noticias</a>
+            <a href="#">Sobre nosotros</a>
+        </div>
+      </header>
+      <form action="" class="search">
+        <input type="text" placeholder="Buscar" name="find">
+        <button type="submit" onclick="notReady()"><i class="material-icons" style="color:white; width:20px; height:20px">search</i></button>
+      </form>
+    </div>
+    <div class="container">
+      <aside class="noticias">
+        <a href="https://www.facebook.com/photo/?fbid=2160732934099095&set=a.128505963988479" target="_blank" rel="noreferrer noopener">
+        <section>
+          <h1>Softboy solicita pareja en Facebook</h1>
+          <p>
+            Softboy local se desespera ante la solteria y postea anuncio para buscar pareja a traves de Facebook.
+            <br>
+            Hasta donde se sabe, nadie le contesto al llamado y sigue solo, solito, solote, y probablemente seguira
+            asi durante mucho mas tiempo.
+            <br>
+            Facebook dijo no quitar el post de su plataforma porque podria ser tomado como discriminacion por parte
+            de la empresa, debido a la estetica "Cute" del anuncio posteado por el usuario.
+            <br>
+            (haga clic para ver mas)
+          </p>
+          <hr>
+        </section>
+        </a>
+        <section>
+          <h1>Que esta pasando en los laboratorios de informatica?</h1>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer noopener"><img src="resources\334917710_896444454906702_8742799118249935873_n.jpg" alt="infoLove"></a>
+          <p>(Haga clic para ver mas)</p>
+          <hr>
+        </section>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer noopener">
+        <section>
+          <h1>La desbloquean despues de mucho tiempo</h1>
+          <p>
+            Estudiante local es desbloqueada de facebook despues de varias semanas. Esta asegura sentirse
+            bendecida y agradecida por poder publicar contenido machista, xenofobo y homofobo nuevamente en
+            su cuenta.
+            <br>
+            <p>(Clic para ver mas)</p>
+          </p>
+          <hr>
+        </section>
+        </a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer noopener">
+        <section>
+          <h1>Tenemos nuevo campeon de ajedrez</h1>
+          <p>
+            Tras enfrentarse a un duro rival en octavos de final, probablemente el mas duro de toda su carrera como ajedrecista,
+            Ronald Sanchez se corona como el campeon de ajedrez de la UPTOS "clodosbaldo Russian".
+            <br>
+            "Despues de haberme enfrentado al mejor, y ganar, no podia decepcionarlo, asi que gane por el". 
+            <br>
+            Dijo el campeon en entrevista 100% real no fake para The Cum Times.
+            <br>
+            (clic para ver mas)
+          </p>    
+          <hr>
+        </section>
+        </a>
+        <section>
+          <h1>Machista recibe abrazo de otro hombre por primera vez, y le gusto</h1>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer noopener"><img src="resources\321634207_1203586553892748_1455416179236919635_n.jpg" alt="machirulo"></a>
+          <p>(clic para ver mas)</p>
+          <hr>
+        </section>
+      </aside>
+      <div class="main">
+        <article class="titulares">
+          <h1>Sopa con Cheetos, asqueroso o simplemente marginal?</h1>
+          <h2>"Campesino local lleva al maximo el concepto de marginalidad al preparar una sopa con Cheetos."</h2>
+          <section>
+            <div class="publication">
+              <p>Victor Patino III</p>
+              <i class="material-icons">access_time</i>
+              <p>16, 03, 2023 at 01:28 pm</p>
+            </div>
+            <div class="share">
+              <button type="button" id="facebook" onclick="notReady()">
+                <svg fill="#ffffff" width="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M21.95 5.005l-3.306-.004c-3.206 0-5.277 2.124-5.277 5.415v2.495H10.05v4.515h3.317l-.004 9.575h4.641l.004-9.575h3.806l-.003-4.514h-3.803v-2.117c0-1.018.241-1.533 1.566-1.533l2.366-.001.01-4.256z"/></svg>
+              </button>
+              <button type="button" id="twitter" onclick="notReady()">
+                <svg fill="#ffffff" width="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M11.919 24.94c-2.548 0-4.921-.747-6.919-2.032a9.049 9.049 0 0 0 6.681-1.867 4.512 4.512 0 0 1-4.215-3.137c.276.054.559.082.848.082.412 0 .812-.056 1.193-.156a4.519 4.519 0 0 1-3.622-4.425v-.059a4.478 4.478 0 0 0 2.042.564 4.507 4.507 0 0 1-2.008-3.758c0-.824.225-1.602.612-2.268a12.811 12.811 0 0 0 9.303 4.715 4.517 4.517 0 0 1 7.692-4.115 9.107 9.107 0 0 0 2.866-1.094 4.542 4.542 0 0 1-1.983 2.498 9.08 9.08 0 0 0 2.592-.71 9.283 9.283 0 0 1-2.252 2.337c.008.193.014.388.014.583-.001 5.962-4.542 12.843-12.844 12.842"/></svg>
+              </button>
+            </div>
+          </section>
+          <img src="resources\336223408_1435041660596270_4371396760978979268_n.jpg" alt="cheetos">
+          <p>
+            Joven campesino, residente de Villa 'Inserte nombre de la comunidad porque nadie sabe pronunciarla' presumio en redes
+            sociales la nueva receta que se le habia ocurrido probar... Nada mas y nada menos que un caldo tradicional de carne con 
+            agregandole una cantidad considerable de Cheetos.
+            <br>
+            Para muchos esto fue considerado inmediatamente como un acto marginal y carente de buen gusto, sin embargo, el joven se
+            siente orgulloso de su creacion, y no teme presumirle su creatividad a cualquiera que la cuestione. Segun el mismo, la sopa
+            tiene un sabor picante unico que le puede sacar las lagrimas incluso al mas rudo.
+            <br>
+            Por su parte, Frito-Lay, empresa fabricante del producto empleado por el joven, no se ha pronunciado al respecto, y por
+            el bien de la gastronomia, esperemos que no lo haga y esto quede enterrado en el pasado lo antes posible.
+          </p>
+        </article>
+        <article class="titulares">
+          <h1>Nos copian por primera vez!</h1>
+          <h2>"Programador novato toma inspiracion de The Cum Times para su tarea de la universidad."</h2>
+          <section>
+            <div class="publication">
+              <p>Victor Patino III</p>
+              <i class="material-icons">access_time</i>
+              <p>17, 03, 2023 at 05:15 pm</p>
+            </div>
+            <div class="share">
+              <button type="button" id="facebook" onclick="notReady()">
+                <svg fill="#ffffff" width="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M21.95 5.005l-3.306-.004c-3.206 0-5.277 2.124-5.277 5.415v2.495H10.05v4.515h3.317l-.004 9.575h4.641l.004-9.575h3.806l-.003-4.514h-3.803v-2.117c0-1.018.241-1.533 1.566-1.533l2.366-.001.01-4.256z"/></svg>
+              </button>
+              <button type="button" id="twitter" onclick="notReady()">
+                <svg fill="#ffffff" width="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M11.919 24.94c-2.548 0-4.921-.747-6.919-2.032a9.049 9.049 0 0 0 6.681-1.867 4.512 4.512 0 0 1-4.215-3.137c.276.054.559.082.848.082.412 0 .812-.056 1.193-.156a4.519 4.519 0 0 1-3.622-4.425v-.059a4.478 4.478 0 0 0 2.042.564 4.507 4.507 0 0 1-2.008-3.758c0-.824.225-1.602.612-2.268a12.811 12.811 0 0 0 9.303 4.715 4.517 4.517 0 0 1 7.692-4.115 9.107 9.107 0 0 0 2.866-1.094 4.542 4.542 0 0 1-1.983 2.498 9.08 9.08 0 0 0 2.592-.71 9.283 9.283 0 0 1-2.252 2.337c.008.193.014.388.014.583-.001 5.962-4.542 12.843-12.844 12.842"/></svg>
+              </button>
+            </div>
+          </section>
+          <img src="resources\336583807_471103785137277_4684082898805469589_n.jpg" alt="example">
+          <p>
+            En mitad de la jornada laboral en la oficina, nos llego una imagen un tanto alarmante, resulto
+            que un joven estudiante de informatica tomo inspiracion de nuestro portal para hacer una propio,
+            al cual llamo "Universal Times".
+            <br>
+            Desde las oficinas de The Cum Times, lejos de sentirnos ofendidos por este hecho, nos sentimos
+            profundamente alagados por este joven, y le deseamos la mejor de las suertes con su tarea de programacion.
+        </article>               
+    </div>
+    <aside class="brandContent">
+      <iframe src="https://www.youtube.com/embed/cQA7VKSvXFM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <a href="#"><h1>@tct_journal</h1></a>
+      <blockquote class="twitter-tweet"><p lang="es" dir="ltr">¿Saben qué dice el gato aesthetic cuando se le mancha la ropa?<br><br>-¡¡MiiiOOOOUTFIT!!! ¡¡¡MiiiOOUUTFIT!!!</p>&mdash; Víctor III (@VictorJopaca) <a href="https://twitter.com/VictorJopaca/status/1605425896990572546?ref_src=twsrc%5Etfw">December 21, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+      <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Me parece curioso cómo el estereotipo asiatico pasó de ser los que saben artes marciales a ser los que saben artes marciales, le hacen al baile, y llevan la androginia a otro nivel.</p>&mdash; Víctor III (@VictorJopaca) <a href="https://twitter.com/VictorJopaca/status/1636215115635732480?ref_src=twsrc%5Etfw">March 16, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+      <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Querer tener el cabello largo es más difícil que querer tener un hijo... Si quieres un hijo solo le pones ganas y lo tienes en un año, pero el cabello largo hay que trabajarlo durante mucho más tiempo.</p>&mdash; Víctor III (@VictorJopaca) <a href="https://twitter.com/VictorJopaca/status/1593779838187339778?ref_src=twsrc%5Etfw">November 19, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+      <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Soy como una galletita, me ablando con la leche.</p>&mdash; Víctor III (@VictorJopaca) <a href="https://twitter.com/VictorJopaca/status/1606789884978642945?ref_src=twsrc%5Etfw">December 24, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+    </aside>  
+    <footer>
+      <form action="" class="subscribe">
+        <input type="text" placeholder="E-mail" name="find">
+        <button type="submit" onclick="notReady()">Suscribete</button>
+      </form>
+      <p>© 2023 The Cum Times journal</p>
+        <section class="footerInfo">
+          <a href="">Contacto</a> <br>
+          <a href="">Mision y vision</a> <br>
+          <a href="">Sobre nosotros</a>
+        </section>
+        <hr>
+        <section class="footerInfo">
+          <a href="">FAQ</a> <br>
+          <a href="">Donaciones</a> <br>
+          <a href="">Desarrollador</a>
+        </section>
+        <hr>
+        <section class="footerInfo">
+          <a href="">Twitter</a> <br>
+          <a href="">Instagram</a> <br>
+          <a href="">Facebook</a>
+        </section>
+        <a href="#"><i class="material-icons" id="home">home</i></a>
+    </footer>
+  </body>
+</html>
