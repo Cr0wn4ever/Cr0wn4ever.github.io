@@ -282,3 +282,7 @@ footer hr{
   font-size: 48px;
   margin-left: 30px;
 }
+.material-icons{
+  height: 20px;
+  margin: 0px 3px 0px 3px;
+}
